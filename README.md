@@ -18,3 +18,4 @@ Jumbotron
 time| 70% middle to add info | save button (blue)
 9 rows
 3 columns 2-8-2
+Comment Box inspired by https://codeconvey.com/comment-box-in-html-and-css/
