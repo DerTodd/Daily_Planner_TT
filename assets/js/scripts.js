@@ -50,7 +50,7 @@ setInterval(function setTime() {
         // Use JSON.parse() to convert text to JavaScript object
         var carryOverEvents = JSON.parse(localStorage.getItem("scheduledEvents"));
         console.log(carryOverEvents);
-        // Check if data is returned, if not exit out of the function
+        // Check to see if there is data in the varable.  If there is, contine onward!
         if (carryOverEvents !== null) {
         document.getElementById("events9").textContent = carryOverEvents.events9;
         document.getElementById("events10").textContent = carryOverEvents.events10;
@@ -85,7 +85,7 @@ setInterval(function setTime() {
       init();
       
 function changeColors() {
-  if(currentHour < 9) {
+  if(parseInt(currentHour) < 9) {
         document.querySelector(".nine").style.backgroundColor = "green";
         document.querySelector(".ten").style.backgroundColor = "green";
         document.querySelector(".eleven").style.backgroundColor = "green";
@@ -97,7 +97,7 @@ function changeColors() {
         document.querySelector(".five").style.backgroundColor = "green";
         
   };
-  if(currentHour === 9) {
+  if(currentHour === "09") {
     document.querySelector(".nine").style.backgroundColor = "red";
     document.querySelector(".ten").style.backgroundColor = "green";
     document.querySelector(".eleven").style.backgroundColor = "green";
@@ -109,7 +109,7 @@ function changeColors() {
     document.querySelector(".five").style.backgroundColor = "green";
     
 };
-  if(currentHour === 10) {
+  if(currentHour === "10") {
     document.querySelector(".nine").style.backgroundColor = "gray";
     document.querySelector(".ten").style.backgroundColor = "red";
     document.querySelector(".eleven").style.backgroundColor = "green";
@@ -121,7 +121,7 @@ function changeColors() {
     document.querySelector(".five").style.backgroundColor = "green";
     
 };
-if(currentHour === 11) {
+if(currentHour === "11") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "red";
@@ -133,7 +133,7 @@ if(currentHour === 11) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 12) {
+if(currentHour === "12") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -145,7 +145,7 @@ if(currentHour === 12) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 13) {
+if(currentHour === "13") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -157,7 +157,7 @@ if(currentHour === 13) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 14) {
+if(currentHour === "14") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -169,7 +169,7 @@ if(currentHour === 14) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 15) {
+if(currentHour === "15") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -181,7 +181,7 @@ if(currentHour === 15) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 16) {
+if(currentHour === "16") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -193,7 +193,7 @@ if(currentHour === 16) {
   document.querySelector(".five").style.backgroundColor = "green";
   
 };
-if(currentHour === 17) {
+if(currentHour === "17") {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
@@ -205,7 +205,7 @@ if(currentHour === 17) {
   document.querySelector(".five").style.backgroundColor = "red";
   
 };
-if(currentHour > 17) {
+if(parseInt(currentHour) > 17) {
   document.querySelector(".nine").style.backgroundColor = "gray";
   document.querySelector(".ten").style.backgroundColor = "gray";
   document.querySelector(".eleven").style.backgroundColor = "gray";
