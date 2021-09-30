@@ -14,7 +14,8 @@ var events3 = document.getElementById("events3");
 var events4 = document.getElementById("events4");
 var events5 = document.getElementById("events5");
 var currentDay = document.getElementById("currentDay");
-var currentHour = moment().format("h");
+var currentHour = moment().format("HH");
+var nine = document.getElementsByClassName("nine");
 
 
 setInterval(function setTime() {
@@ -79,7 +80,141 @@ setInterval(function setTime() {
         // When the init function is executed, the code inside renderLastGrade function will also execute
         renderScheduledEvents();
         console.log(currentHour);
+        changeColors();
       }
       init();
       
-
+function changeColors() {
+  if(currentHour < 9) {
+        document.querySelector(".nine").style.backgroundColor = "green";
+        document.querySelector(".ten").style.backgroundColor = "green";
+        document.querySelector(".eleven").style.backgroundColor = "green";
+        document.querySelector(".twelve").style.backgroundColor = "green";
+        document.querySelector(".one").style.backgroundColor = "green";
+        document.querySelector(".two").style.backgroundColor = "green";
+        document.querySelector(".three").style.backgroundColor = "green";
+        document.querySelector(".four").style.backgroundColor = "green";
+        document.querySelector(".five").style.backgroundColor = "green";
+        
+  };
+  if(currentHour === 9) {
+    document.querySelector(".nine").style.backgroundColor = "red";
+    document.querySelector(".ten").style.backgroundColor = "green";
+    document.querySelector(".eleven").style.backgroundColor = "green";
+    document.querySelector(".twelve").style.backgroundColor = "green";
+    document.querySelector(".one").style.backgroundColor = "green";
+    document.querySelector(".two").style.backgroundColor = "green";
+    document.querySelector(".three").style.backgroundColor = "green";
+    document.querySelector(".four").style.backgroundColor = "green";
+    document.querySelector(".five").style.backgroundColor = "green";
+    
+};
+  if(currentHour === 10) {
+    document.querySelector(".nine").style.backgroundColor = "gray";
+    document.querySelector(".ten").style.backgroundColor = "red";
+    document.querySelector(".eleven").style.backgroundColor = "green";
+    document.querySelector(".twelve").style.backgroundColor = "green";
+    document.querySelector(".one").style.backgroundColor = "green";
+    document.querySelector(".two").style.backgroundColor = "green";
+    document.querySelector(".three").style.backgroundColor = "green";
+    document.querySelector(".four").style.backgroundColor = "green";
+    document.querySelector(".five").style.backgroundColor = "green";
+    
+};
+if(currentHour === 11) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "red";
+  document.querySelector(".twelve").style.backgroundColor = "green";
+  document.querySelector(".one").style.backgroundColor = "green";
+  document.querySelector(".two").style.backgroundColor = "green";
+  document.querySelector(".three").style.backgroundColor = "green";
+  document.querySelector(".four").style.backgroundColor = "green";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 12) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "red";
+  document.querySelector(".one").style.backgroundColor = "green";
+  document.querySelector(".two").style.backgroundColor = "green";
+  document.querySelector(".three").style.backgroundColor = "green";
+  document.querySelector(".four").style.backgroundColor = "green";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 13) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "red";
+  document.querySelector(".two").style.backgroundColor = "green";
+  document.querySelector(".three").style.backgroundColor = "green";
+  document.querySelector(".four").style.backgroundColor = "green";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 14) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "gray";
+  document.querySelector(".two").style.backgroundColor = "red";
+  document.querySelector(".three").style.backgroundColor = "green";
+  document.querySelector(".four").style.backgroundColor = "green";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 15) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "gray";
+  document.querySelector(".two").style.backgroundColor = "gray";
+  document.querySelector(".three").style.backgroundColor = "red";
+  document.querySelector(".four").style.backgroundColor = "green";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 16) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "gray";
+  document.querySelector(".two").style.backgroundColor = "gray";
+  document.querySelector(".three").style.backgroundColor = "gray";
+  document.querySelector(".four").style.backgroundColor = "red";
+  document.querySelector(".five").style.backgroundColor = "green";
+  
+};
+if(currentHour === 17) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "gray";
+  document.querySelector(".two").style.backgroundColor = "gray";
+  document.querySelector(".three").style.backgroundColor = "gray";
+  document.querySelector(".four").style.backgroundColor = "gray";
+  document.querySelector(".five").style.backgroundColor = "red";
+  
+};
+if(currentHour > 17) {
+  document.querySelector(".nine").style.backgroundColor = "gray";
+  document.querySelector(".ten").style.backgroundColor = "gray";
+  document.querySelector(".eleven").style.backgroundColor = "gray";
+  document.querySelector(".twelve").style.backgroundColor = "gray";
+  document.querySelector(".one").style.backgroundColor = "gray";
+  document.querySelector(".two").style.backgroundColor = "gray";
+  document.querySelector(".three").style.backgroundColor = "gray";
+  document.querySelector(".four").style.backgroundColor = "gray";
+  document.querySelector(".five").style.backgroundColor = "gray";
+  
+};
+}
