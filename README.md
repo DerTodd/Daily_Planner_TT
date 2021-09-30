@@ -28,3 +28,5 @@ time| 70% middle to add info | save button (blue)
 3 columns 2-8-2
 ### Beautiful images
 [Planner](./assets/images/planner_site.jpg)
+### The Pages of Destiny
+the webpage (https://dertodd.github.io/Daily_Planner_TT/) and the gitHub (https://github.com/DerTodd/Daily_Planner_TT)
