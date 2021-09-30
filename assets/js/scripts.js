@@ -1,33 +1,62 @@
 var saveButton = document.getElementsByClassName("saveButton");
 var events9 = document.getElementById("events9");
-var saveBtn = document.getElementsByClassName("saveBtn");
-
-
+//var saveBtn = document.getElementById("saveBtn9");
+//var saveBtn = document.getElementsByClassName("saveBtn");
+var savedEvents9 = document.getElementById("saved-events9");
+//var comment = document.getElementById("msg");
+var buttons = document.getElementById("Buttons");
+var events10 = document.getElementById("events10");
+var events11 = document.getElementById("events11");
+var events12 = document.getElementById("events12");
+var events1 = document.getElementById("events1");
+var events2 = document.getElementById("events2");
+var events3 = document.getElementById("events3");
+var events4 = document.getElementById("events4");
+var events5 = document.getElementById("events5");
 
 
     function saveScheduledEvents() {
         // Save related form data as an object
         var scheduledEvents = {
-          nineOClock: events9.value.trim(),
+          events9: events9.value.trim(),
+          events10: events10.value.trim(),
+          events11: events11.value.trim(),
+          events12: events12.value.trim(),
+          events1: events1.value.trim(),
+          events2: events2.value.trim(),
+          events3: events3.value.trim(),
+          events4: events4.value.trim(),
+          events5: events5.value.trim(),
           
         };
         // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
         localStorage.setItem("scheduledEvents", JSON.stringify(scheduledEvents));
+        console.log(scheduledEvents)
       }
       
       function renderScheduledEvents() {
         // Use JSON.parse() to convert text to JavaScript object
-        var carryOverEvents = JSON.parse(localStorage.getItem("studentGrade"));
+        var carryOverEvents = JSON.parse(localStorage.getItem("scheduledEvents"));
+        console.log(carryOverEvents);
         // Check if data is returned, if not exit out of the function
         if (carryOverEvents !== null) {
-        document.getElementById("saved-events9").textContent = carryOverEvents.events9;
+        document.getElementById("events9").textContent = carryOverEvents.events9;
+        document.getElementById("events10").textContent = carryOverEvents.events10;
+        document.getElementById("events11").textContent = carryOverEvents.events11;
+        document.getElementById("events12").textContent = carryOverEvents.events12;
+        document.getElementById("events1").textContent = carryOverEvents.events1;
+        document.getElementById("events2").textContent = carryOverEvents.events2;
+        document.getElementById("events3").textContent = carryOverEvents.events3;
+        document.getElementById("events4").textContent = carryOverEvents.events4;
+        document.getElementById("events5").textContent = carryOverEvents.events5;
+        
         
         } else {
           return;
         }
       }
       
-      saveBtn.addEventListener("click", function(event) {
+      buttons.addEventListener("click", function(event) {
       event.preventDefault();
       console.log(event.target);
       saveScheduledEvents();
@@ -42,60 +71,3 @@ var saveBtn = document.getElementsByClassName("saveBtn");
       init();
       
 
-//     // This function is being called below and will run when the page loads.
-// function init() {
-//     // Get stored todos from localStorage
-//     var storedTodos = JSON.parse(localStorage.getItem("todos"));
-  
-//     // If todos were retrieved from localStorage, update the todos array to it
-//     if (storedTodos !== null) {
-//       todos = storedTodos;
-//     }
-  
-//     // This is a helper function that will render todos to the DOM
-//     renderTodos();
-//   }
-  
-//   function storeTodos() {
-//     // Stringify and set key in localStorage to todos array
-//     localStorage.setItem("todos", JSON.stringify(todos));
-//   }
-  
-//   // Add submit event to form
-//   todoForm.addEventListener("submit", function(event) {
-//     event.preventDefault();
-  
-//     var todoText = todoInput.value.trim();
-  
-//     // Return from function early if submitted todoText is blank
-//     if (todoText === "") {
-//       return;
-//     }
-  
-//     // Add new todoText to todos array, clear the input
-//     todos.push(todoText);
-//     todoInput.value = "";
-  
-//     // Store updated todos in localStorage, re-render the list
-//     storeTodos();
-//     renderTodos();
-//   });
-  
-//   // Add click event to todoList element
-//   todoList.addEventListener("click", function(event) {
-//     var element = event.target;
-  
-//     // Checks if element is a button
-//     if (element.matches("button") === true) {
-//       // Get its data-index value and remove the todo element from the list
-//       var index = element.parentElement.getAttribute("data-index");
-//       todos.splice(index, 1);
-  
-//       // Store updated todos in localStorage, re-render the list
-//       storeTodos();
-//       renderTodos();
-//     }
-//   });
-  
-//   // Calls init to retrieve data and render it to the page on load
-//   init()
