@@ -13,7 +13,18 @@ var events2 = document.getElementById("events2");
 var events3 = document.getElementById("events3");
 var events4 = document.getElementById("events4");
 var events5 = document.getElementById("events5");
+var currentDay = document.getElementById("currentDay");
+var currentHour = moment().format("h");
 
+
+setInterval(function setTime() {
+  var dayAndTime = moment().format("MMMM Do YYYY, h:mm:ss a");
+  var dayWeek = moment().format("[Today is] dddd ");
+  hour = moment().format("h");
+  document.getElementById("currentDay").textContent = dayWeek + dayAndTime;
+  
+
+}, 1000);
 
     function saveScheduledEvents() {
         // Save related form data as an object
@@ -67,6 +78,7 @@ var events5 = document.getElementById("events5");
       function init() {
         // When the init function is executed, the code inside renderLastGrade function will also execute
         renderScheduledEvents();
+        console.log(currentHour);
       }
       init();
       
